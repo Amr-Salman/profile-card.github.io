@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background: hsl(185, 75%, 39%);
+      padding: 0;
+      margin: 0;
+    }
+    .profile {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+    .bg {
+      position: absolute;
+      width: 100%;
+      transform: translate(-50%, -70%);
+      z-index: -1;
+    }
+    .bg--top {
+      transform: translate(-50%, -70%);
+    }
+    .bg--bottom {
+      transform: translate(50%, 70%);
+    }
+    .profile-card {
+      width: 90%;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+      color: hsl(229, 23%, 23%);
+      z-index: 1;
+      padding-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card-bg {
+      width: 100%;
+      height: 35%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .profile-card__pic {
+      border:5px solid #fff;
+      border-radius: 50%;
+    }
+    .profile-card__name {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .profile-card__name span {
+      font-weight: 400;
+      margin-left: 10px;
+      color:hsl(227, 10%, 46%);
+    }
+    .profile-card__place {
+      letter-spacing: 1px;
+      font-size: 10px;
+      color:hsl(227, 10%, 46%);
+    }
+    .profile-card__stats {
+      align-self: stretch;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      list-style: none;
+      border-top: 1px solid hsl(210, 2%, 74%) ;
+      padding: 30px 40px;
+      margin: 0;
+    }
+    .stat__number {
+      margin: 0;
+    }
+    .stat__name {
+      margin-bottom: 0;
+    }
+    @media (min-width: 420px) {
+      .profile-card {
+        width: 70%;
+      }
+      .bg--top {
+        transform: translate(-45%, -45%);
+      }
+      .bg--bottom {
+      transform: translate(45%, 45%);
+      }
+    }
+    @media (min-width: 550px) {
+      .profile-card {
+        width: 55%;
+    }
+    }
+    @media (min-width: 768px) {
+      .profile-card {
+        width: 40%;
+      }
+    }
+    @media (min-width: 1080px) {
+      .profile-card {
+        width: 25%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="profile">
+    <img class="bg bg--top" src="images/bg-pattern-top.svg" alt="top">
+    <img class="bg bg--bottom"  src="images/bg-pattern-bottom.svg" alt="bottom">
+    <div class="profile-card">
+      <img class="card-bg" src="images/bg-pattern-card.svg" alt="card bg">
+        <img class="profile-card__pic"  src="images/image-victor.jpg" alt="victor img">
+        <h2 class="profile-card__name">Victor Crest <span>26</span></h2>
+        <p class="profile-card__place">London</p>
+      <ul class="profile-card__stats">
+        <li>
+          <h4 class="stat__number">80K</h4>
+          <p class="stat__name">Followers</p>
+        </li>
+        <li>
+          <h4 class="stat__number">803K</h4>
+          <p class="stat__name">Likes</p>
+        </li>
+        <li>
+          <h4 class="stat__number">1.4K</h4>
+          <p class="stat__name">Photos</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
